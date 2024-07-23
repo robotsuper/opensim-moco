@@ -1,6 +1,6 @@
 [submodule "opensim-core"]
 	path = opensim-core
-	url = https://github.com/opensim-org/opensim-core
+	url = git@github.com:opensim-org/opensim-core.git
 [submodule "opensim-models"]
 	path = opensim-models
-	url = https://github.com/opensim-org/opensim-models
+	url = git@github.com:opensim-org/opensim-models.git

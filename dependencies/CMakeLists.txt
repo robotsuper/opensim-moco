@@ -261,7 +261,7 @@ else()
         # automake, libtool?)
         ExternalProject_Add(adolc
             DEPENDS           colpack
-            GIT_REPOSITORY    https://github.com/coin-or/ADOL-C.git
+            GIT_REPOSITORY    git@github.com:coin-or/ADOL-C.git
             GIT_TAG           releases/2.6.3
             #SOURCE_DIR        "${CMAKE_SOURCE_DIR}/adol-c"
             #BINARY_DIR        "${CMAKE_SOURCE_DIR}/adol-c"
@@ -302,7 +302,7 @@ endif()
 if(SUPERBUILD_casadi)
     AddDependency(NAME casadi
                   DEPENDS ipopt
-                  GIT_URL    https://github.com/stanfordnmbl/casadi.git
+                  GIT_URL    git@github.com:stanfordnmbl/casadi.git
                   # Include threadsafe SharedObject.
                   GIT_TAG    1555e79ea59cbd25d05894f2e9b351d92bacf348
                   CMAKE_ARGS -DWITH_IPOPT:BOOL=ON

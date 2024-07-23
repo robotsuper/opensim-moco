@@ -57,3 +57,5 @@ venv
 
 # MATLAB
 *.asv
+
+build/
