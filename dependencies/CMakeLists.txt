@@ -18,8 +18,8 @@ if(MSVC)
     endif()
 endif()
 
-option(OPENSIM_JAVA_WRAPPING "Build opensim-core Java/MATLAB interface." OFF)
-option(OPENSIM_PYTHON_WRAPPING "Build opensim-core Python interface." OFF)
+option(OPENSIM_JAVA_WRAPPING "Build opensim-core Java/MATLAB interface." ON)
+option(OPENSIM_PYTHON_WRAPPING "Build opensim-core Python interface." ON)
 set(OPENSIM_PYTHON_VERSION 3 CACHE STRING
     "The major Python version (2 or 3) for opensim-core.")
 # To create a drop-down in the CMake GUI:
@@ -284,7 +284,7 @@ else()
         # Patch the scripts that download Metis and MUMPS to use our
         # Sourceforge mirror. The original links are not reliable.
         ExternalProject_Add(ipopt
-            URL https://www.coin-or.org/download/source/Ipopt/Ipopt-3.12.8.zip
+            URL /workspace/exoskeleton_robot/environment/pre_download/Ipopt/Ipopt-3.12.8.zip
             INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/ipopt"
             PATCH_COMMAND cd <SOURCE_DIR>/ThirdParty/Metis && patch < ${CMAKE_SOURCE_DIR}/get.Metis.patch
                   COMMAND cd <SOURCE_DIR>/ThirdParty/Metis && ./get.Metis
@@ -313,7 +313,7 @@ if(SUPERBUILD_casadi)
                   )
 endif()
 
-include(opensim-core.cmake)
+######include(opensim-core.cmake)
 
 
 #######################
